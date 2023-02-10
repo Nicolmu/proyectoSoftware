@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return "Bienvenidos a la web en laravel 9";
 });
+
+Route::get('/horario',[PrincipalController::class,'index']);
